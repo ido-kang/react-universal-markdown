@@ -43,7 +43,7 @@ const LineBreak = ({style}) =>
 
 export const NativeComponents = mapValues(
   {
-    Text: ({style, textStyle, children}) =>
+    Text: ({style, textStyle, children, numberOfLines}) =>
       <Text numberOfLines={numberOfLines} style={[style, textStyle]}>
         {children}
       </Text>,
@@ -66,7 +66,7 @@ export const NativeComponents = mapValues(
       <Text style={style}>
         {children}
       </Text>,
-    Paragraph: ({style, children}) =>
+    Paragraph: ({style, children, numberOfLines}) =>
       <View style={style}>
           <Text numberOfLines={numberOfLines}>{children}</Text>
       </View>,
